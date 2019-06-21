@@ -4,6 +4,9 @@
 * [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
 <!-- default file list end -->
 # ASPxPopupControl - How to create a custom close button
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e3930)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to implement a custom <strong>ASPxPopupControl</strong> close button:</p><p>1) Specify the <strong>ASPxPopupControl's HeaderTemplate</strong>;<br />
