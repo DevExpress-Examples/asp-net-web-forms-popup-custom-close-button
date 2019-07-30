@@ -5,7 +5,7 @@
 <!-- default file list end -->
 # ASPxPopupControl - How to create a custom close button
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e3930)**
+**[[Run Online]](https://codecentral.devexpress.com/e3930/)**
 <!-- run online end -->
 
 
