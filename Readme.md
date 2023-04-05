@@ -1,31 +1,32 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128555188/13.1.4%2B)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E3930)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
-
-* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
-<!-- default file list end -->
-# ASPxPopupControl - How to create a custom close button
+# Popup Control for ASP.NET Web Forms - How to create a custom close button
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/e3930/)**
 <!-- run online end -->
 
+This example demonstrates how to create a header template, add the ASPxImage control to the template, and emulate the **Close** button functionality.
 
-<p>This example demonstrates how to implement a custom <strong>ASPxPopupControl</strong> close button:</p><p>1) Specify the <strong>ASPxPopupControl's HeaderTemplate</strong>;<br />
-2) Define a custom button via the <strong>ASPxImage</strong> control;<br />
-3) Handle the client-side <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxEditorsScriptsASPxClientStaticEdit_Clicktopic"><u>ASPxClientImage.Click</u></a> event and call the client-side <a href="http://documentation.devexpress.com/#AspNet/DevExpressWebASPxPopupControlScriptsASPxClientPopupControlBase_Hidetopic"><u>ASPxClientPopupCont</u><u>r</u><u>ol.Hide</u></a> method.</p>
+## Overview
+
+Specify the popup's [HeaderTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxPopupControlBase.HeaderTemplate) property and add the `ASPxImage` control to the template. To emulate the **Close** button functionality, handle the image control's client-side `Click` event and hide the popup window in the handler.
 
 ```aspx
-<dx:ASPxPopupControl ID="popup" runat="server" ClientInstanceName="popup" ShowOnPageLoad="true" CloseAction="CloseButton"><newline/>  <HeaderTemplate><newline/>      ...<newline/>
-      <dx:ASPxImage ... runat="server"><newline/>         <ClientSideEvents Click="function(s, e){<newline/>             popup.Hide();<newline/>         }" /><newline/>      </dx:ASPxImage><newline/>
-      ...<newline/>  </HeaderTemplate><newline/>...<newline/></dx:ASPxPopupControl> <newline/>
+<dx:ASPxPopupControl ID="popup" runat="server" ClientInstanceName="popup" CloseAction="CloseButton">
+    <HeaderTemplate>
+        <div style="float: right">
+            <dx:ASPxImage ID="img" runat="server" ImageUrl="~/close.png"  Cursor="pointer">
+                <ClientSideEvents Click="function(s, e){
+                    popup.Hide();
+                }" />
+            </dx:ASPxImage>
+        </div>
+    </HeaderTemplate>
+</dx:ASPxPopupControl>
 ```
 
-<p> </p>
+## Files to Review
 
-<br/>
+* [Default.aspx](./CS/WebSite/Default.aspx) (VB: [Default.aspx](./VB/WebSite/Default.aspx))
 
+## Documentation
 
+* [Popup Control](https://docs.devexpress.com/AspNet/3582/components/docking-and-popups/popup-control)
