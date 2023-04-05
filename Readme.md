@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Popup Control for ASP.NET Web Forms - How to create a custom close button
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e3930/)**
+**[[Run Online]](https://codecentral.devexpress.com/128555188/)**
 <!-- run online end -->
 
 This example demonstrates how to create a header template, add the ASPxImage control to the template, and emulate the **Close** button functionality.
